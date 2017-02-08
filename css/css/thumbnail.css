@@ -1,0 +1,18 @@
+@import url(../webmodule.css);
+.wm-thumbnail {
+    position: relative;
+    padding: .3rem;
+    border: 1px solid #E7E7E7;
+    display: block;
+    width: 100%;
+}
+
+.wm-thumbnail img {
+    display: block;
+    width: 100%;
+}
+
+.wm-thumbnail .wm-thumbnail-caption,
+.wm-thumbnail figcaption {
+    padding: .3rem .5rem;
+}

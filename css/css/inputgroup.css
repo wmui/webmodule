@@ -1,0 +1,109 @@
+@import url(../webmodule.css);
+.wm-input-group {
+    border-collapse: separate;
+    display: table;
+    width: 100%;
+    margin-bottom: 1rem;
+}
+
+.wm-input-group .wm-input-btn,
+.wm-input-group .wm-input-addon {
+    background-color: #EEE;
+    border: 1px solid #CCC;
+    padding: .4rem 1rem;
+    width: 1%;
+    white-space: nowrap;
+    vertical-align: middle;
+    display: table-cell;
+}
+
+.wm-input-group .wm-input-field {
+    z-index: 2;
+    display: table-cell;
+}
+
+.wm-input-group .wm-input-btn:first-child .wm-btn,
+.wm-input-group .wm-input-addon:first-child {
+    border-right-width: 0;
+}
+
+.wm-input-group .wm-input-btn:last-child .wm-btn,
+.wm-input-group .wm-input-addon:last-child {
+    border-left-width: 0;
+}
+
+.wm-input-group .wm-input-btn,
+.wm-input-group .wm-input-addon {
+    background-color: #EEE;
+    border: 1px solid #d4d4d4;
+    padding: .4rem 1rem;
+    width: 1%;
+    white-space: nowrap;
+    vertical-align: middle;
+    display: table-cell;
+}
+
+.wm-input-group .wm-input-btn {
+    padding: 0;
+    border: 0;
+}
+
+
+/* 输入框组大小 */
+
+.wm-input-group-sm .wm-input-field,
+.wm-input-group-sm .wm-input-btn,
+.wm-input-group-sm .wm-input-btn .wm-btn {
+    height: 2rem;
+    font-size: .8rem;
+}
+
+.wm-input-group-lg .wm-input-field,
+.wm-input-group-lg .wm-input-btn,
+.wm-input-group-lg .wm-input-btn .wm-btn {
+    height: 3rem;
+    font-size: 1.2rem;
+}
+
+
+/* 图标颜色 */
+
+.wm-input-group-primary .fa,
+.wm-input-group-secondary .fa,
+.wm-input-group-success .fa,
+.wm-input-group-warning .fa,
+.wm-input-group-danger .fa {
+    color: #FFF;
+}
+
+
+/* 输入框组颜色 */
+
+.wm-input-group .wm-input-btn .wm-btn {
+    border-color: #d4d4d4;
+}
+
+.wm-input-group.wm-input-group-primary input:focus,
+.wm-input-group.wm-input-group-primary input {
+    border-color: #0E90D2;
+}
+
+.wm-input-group.wm-input-group-secondary input:focus,
+.wm-input-group.wm-input-group-secondary input {
+    border-color: #3BB4F2;
+}
+
+.wm-input-group.wm-input-group-success input:focus,
+.wm-input-group.wm-input-group-success input {
+    border-color: #56B356;
+}
+
+.wm-input-group.wm-input-group-warning input:focus,
+.wm-input-group.wm-input-group-warning input {
+    border-color: #F37B1D;
+}
+
+.wm-input-group.wm-input-group-danger input:focus,
+.wm-input-group.wm-input-group-danger input {
+    border-color: #DD514C;
+}

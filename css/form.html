@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+
+<head>
+    <meta charset="UTF-8">
+    <title>form表单|webmodule</title>
+    <meta name="keywords" content="webmodule">   
+    <meta name="description" content="webmodule，开源前端组件">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="applicable-device" content="pc,mobile">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <link rel="icon" href="../favicon.ico">
+    <link rel="apple-touch-icon-precomposed" href="../apple-touch-icon-precomposed.png">
+    <link rel="stylesheet" type="text/css" href="../dist/webmodule.css">
+    <link rel="stylesheet" type="text/css" href="../assets/css/main.css">
+    <link rel="stylesheet" type="text/css" href="../lib/prettify/prettify.css">
+</head>
+
+<body onload="prettyPrint()">
+    <nav class="wm-navbar navbar-fixed-top ">
+        <div class="wm-navbar-container clearfix">
+            <a class="wm-navbar-banner" href="../index.html">WebModule</a>
+            <div class="wm-navbar-wap"><i class="fa fa-bars" aria-hidden="true"></i></div>
+            <ul class="wm-navbar-menu">
+                <li><a href="../index.html">首页</a></li>
+                <li class="active"><a href="../css/index.html">css组件</a></li>
+                <li><a href="../js/index.html">js组件</a></li>
+                <li><a href="../web/index.html">web组件</a></li>
+            </ul>
+        </div>
+    </nav>
+    <main class="wm-container ">
+        <aside id="aside">
+            <ul class="wm-list wm-list-border wm-list-link">
+                <li><a href="badge.html">徽章(badge)</a></li>
+                <li><a href="breadcrumd.html">面包屑(breadcrumd)</a></li>
+                <li><a href="button.html">按钮(button)</a></li>
+                <li><a href="buttongroup.html">按钮组(buttongroup)</a></li>
+                <li class="wm-active"><a href="form.html">表单(form)</a></li>
+                <li><a href="grid.html">布局(grid)</a></li>
+                <li><a href="icon.html">图标(icon)</a></li>
+                <li><a href="inputgroup.html">输入框组(inputgroup)</a></li>
+                <li><a href="list.html">列表(list)</a></li>
+                <li><a href="pagination.html">分页(pagination)</a></li>
+                <li><a href="panel.html">面板(panel)</a></li>
+                <li><a href="progress.html">进度条(progress)</a></li>
+                <li><a href="table.html">表格(table)</a></li>
+                <li><a href="thumbnail.html">缩略图(thumbnail)</a></li>
+            </ul>
+        </aside>
+        <section id="wm_intro">
+            <!-- 默认表单样式 -->
+            <div class="wm-example">
+    <form class="wm-form">
+        <fieldset>
+            <legend>表单控件</legend>
+            <div class="wm-form-group">
+                <label for="username">用户名：</label>
+                <input type="text" id="username" placeholder="请输入用户名">
+            </div>
+            <div class="wm-form-group">
+                <label for="password">密码：</label>
+                <input type="password" id="password" placeholder="请输入密码">
+            </div>
+            <div class="wm-form-group">
+                <label class="wm-file"><i class="fa fa-cloud-upload" aria-hidden="true"><input type="file"></i>选择文件</label>
+            </div>
+            <div class="wm-checkbox">
+                <input type="checkbox" id="book">
+                <label for="book">读书</label>
+                <input type="checkbox" id="ball">
+                <label for="ball">篮球</label>
+                <input type="checkbox" id="music">
+                <label for="music">音乐</label>
+                <input type="checkbox" id="no" disabled="disabled">
+                <label for="no">禁用</label>
+            </div>
+            <div class="wm-radio">
+                <input type="radio" name="work" id="student">
+                <label for="student">学生</label>
+                <input type="radio" name="work" id="teacher">
+                <label for="teacher">老师</label>
+                <input type="radio" name="work" id="doctor">
+                <label for="doctor">医生</label>
+                <input type="radio" name="work" id="noradio" disabled="disabled">
+                <label for="noradio">禁用</label>
+            </div>
+            <select class="wm-select">
+                <option value="option1">列表项一</option>
+                <option value="option2">列表项二</option>
+                <option value="option3">列表项三</option>
+                <option value="option4">列表项四</option>
+            </select>
+            <textarea placeholder="输入点内容吧..." class="wm-textarea" rows="5"></textarea>
+            <p>禁止输入表单</p>
+            <div class="wm-form-group">
+                <input type="text" placeholder="禁止输入表单" disabled="disabled">
+            </div>
+            <button type="submit" class="wm-btn wm-btn-success">提交按钮</button>
+            <button type="submit" class="wm-btn wm-btn-success" disabled="disabled">禁止提交</button>
+        </fieldset>
+    </form>
+            </div>
+            <div class="wm-example-code">
+            <span class="wm-tooltip">点击复制</span>
+                <div class="wm-copy" data-clipboard-text="">
+                    <i class="fa fa-copy"></i>
+                    <span>复制</span>
+                </div>
+            <pre class="prettyprint">
+    <form class="wm-form">
+        <fieldset>
+            <legend>表单控件</legend>
+            <div class="wm-form-group">
+                <label for="username">用户名：</label>
+                <input type="text" id="username" placeholder="请输入用户名">
+            </div>
+            <div class="wm-form-group">
+                <label for="password">密码：</label>
+                <input type="password" id="password" placeholder="请输入密码">
+            </div>
+            <div class="wm-form-group">
+                <label class="wm-file"><i class="fa fa-cloud-upload" aria-hidden="true"><input type="file"></i>选择文件</label>
+            </div>
+            <div class="wm-checkbox">
+                <input type="checkbox" id="book">
+                <label for="book">读书</label>
+                <input type="checkbox" id="ball">
+                <label for="ball">篮球</label>
+                <input type="checkbox" id="music">
+                <label for="music">音乐</label>
+                <input type="checkbox" id="no" disabled="disabled">
+                <label for="no">禁用</label>
+            </div>
+            <div class="wm-radio">
+                <input type="radio" name="work" id="student">
+                <label for="student">学生</label>
+                <input type="radio" name="work" id="teacher">
+                <label for="teacher">老师</label>
+                <input type="radio" name="work" id="doctor">
+                <label for="doctor">医生</label>
+                <input type="radio" name="work" id="noradio" disabled="disabled">
+                <label for="noradio">禁用</label>
+            </div>
+            <select class="wm-select">
+                <option value="option1">列表项一</option>
+                <option value="option2">列表项二</option>
+                <option value="option3">列表项三</option>
+                <option value="option4">列表项四</option>
+            </select>
+            <textarea placeholder="输入点内容吧..." class="wm-textarea" rows="5"></textarea>
+            <div class="wm-form-group">
+                <input type="text" placeholder="禁止输入表单" disabled="disabled">
+            </div>
+            <button type="submit" class="wm-btn wm-btn-success">提交按钮</button>
+            <button type="submit" class="wm-btn wm-btn-success" disabled="disabled">禁止提交</button>
+        </fieldset>
+    </form>
+            </pre>
+            </div>
+            <div class="wm-intro">默认表单样式：<code>wm-form</code>必须，<code>wm-form-group</code>包裹每一项输入框。<code>wm-checkbox</code>包裹复选框，<code>wm-radio</code>包裹单选按钮，设置<code>disabled</code>禁止选择。<code>wm-textarea</code>修饰文本域样式，禁止了水平方向自由拉伸</div>
+            <!-- 水平排列的表单 -->
+            <div class="wm-example">
+    <form class="wm-form wm-form-horizontal">
+        <fieldset>
+            <div class="wm-form-group">
+                <label for="username">用户名：</label>
+                <input type="text" id="username" placeholder="请输入用户名">
+            </div>
+            <div class="wm-form-group">
+                <label for="password">密码：</label>
+                <input type="password" id="password" placeholder="请输入密码">
+            </div>
+            <div class="wm-checkbox wm-form-offset">
+                <input type="checkbox" id="save">
+                <label for="save">记住密码</label>
+            </div>
+            <div class="wm-form-group wm-form-offset">
+                <button type="submit" class="wm-btn wm-btn-danger">立即登录</button>
+            </div>
+        </fieldset>
+    </form>
+            </div>
+            <div class="wm-example-code">
+            <span class="wm-tooltip">点击复制</span>
+                <div class="wm-copy" data-clipboard-text="">
+                    <i class="fa fa-copy"></i>
+                    <span>复制</span>
+                </div>
+            <pre class="prettyprint">
+    <form class="wm-form wm-form-horizontal">
+        <fieldset>
+            <div class="wm-form-group">
+                <label for="username">用户名：</label>
+                <input type="text" id="username" placeholder="请输入用户名">
+            </div>
+            <div class="wm-form-group">
+                <label for="password">密码：</label>
+                <input type="password" id="password" placeholder="请输入密码">
+            </div>
+            <div class="wm-checkbox wm-form-offset">
+                <input type="checkbox" id="save">
+                <label for="save">记住密码</label>
+            </div>
+            <div class="wm-form-group wm-form-offset">
+                <button type="submit" class="wm-btn wm-btn-danger">立即登录</button>
+            </div>
+        </fieldset>
+    </form>
+            </pre>
+            </div>
+            <div class="wm-intro">水平排列：<code>wm-form-horizontal</code>表示表单水平排列，<code>wm-form-offset</code>给控件一个偏移，使其排列整齐</div>
+            <!-- 行内排列的表单 -->
+            <div class="wm-example">
+    <form class="wm-form wm-form-inline">
+        <fieldset>
+            <div class="wm-form-group">
+                <input type="text" id="username" placeholder="请输入用户名">
+            </div>
+            <div class="wm-form-group">
+                <input type="password" id="password" placeholder="请输入密码">
+            </div>
+            <div class="wm-form-group">
+                <button type="submit" class="wm-btn wm-btn-danger">立即登录</button>
+            </div>
+            <div class="wm-checkbox">
+                <input type="checkbox" id="saveinline">
+                <label for="saveinline">记住密码</label>
+            </div>
+        </fieldset>
+    </form>
+            </div>
+            <div class="wm-example-code">
+            <span class="wm-tooltip">点击复制</span>
+                <div class="wm-copy" data-clipboard-text="">
+                    <i class="fa fa-copy"></i>
+                    <span>复制</span>
+                </div>
+            <pre class="prettyprint">
+    <form class="wm-form wm-form-inline">
+        <fieldset>
+            <div class="wm-form-group">
+                <input type="text" id="username" placeholder="请输入用户名">
+            </div>
+            <div class="wm-form-group">
+                <input type="password" id="password" placeholder="请输入密码">
+            </div>
+            <div class="wm-form-group">
+                <button type="submit" class="wm-btn wm-btn-danger">立即登录</button>
+            </div>
+            <div class="wm-checkbox">
+                <input type="checkbox" id="saveinline">
+                <label for="saveinline">记住密码</label>
+            </div>
+        </fieldset>
+    </form>
+            </pre>
+            </div>
+            <div class="wm-intro">行内排列：<code>wm-form-inline</code>表示表单在一行显示</div>
+            <!-- icon图标表单 -->
+            <div class="wm-example">
+    <form class="wm-form">
+        <fieldset>
+            <div class="wm-form-group wm-form-icon">
+                <i class="fa fa-user" aria-hidden="true"></i>
+                <input type="text" id="username" placeholder="请输入用户名">
+            </div>
+            <div class="wm-form-group wm-form-icon">
+                <i class="fa fa-unlock-alt" aria-hidden="true"></i>
+                <input type="password" id="password" placeholder="请输入密码">
+            </div>
+        </fieldset>
+    </form>
+            </div>
+            <div class="wm-example-code">
+            <span class="wm-tooltip">点击复制</span>
+                <div class="wm-copy" data-clipboard-text="">
+                    <i class="fa fa-copy"></i>
+                    <span>复制</span>
+                </div>
+            <pre class="prettyprint">
+    <form class="wm-form">
+        <fieldset>
+            <p>icon 表单</p>
+            <div class="wm-form-group wm-form-icon">
+                <i class="fa fa-user" aria-hidden="true"></i>
+                <input type="text" id="username" placeholder="请输入用户名">
+            </div>
+            <div class="wm-form-group wm-form-icon">
+                <i class="fa fa-unlock-alt" aria-hidden="true"></i>
+                <input type="password" id="password" placeholder="请输入密码">
+            </div>
+        </fieldset>
+    </form>
+            </pre>
+            </div>
+            <div class="wm-intro">icon图标表单：为需要添加图标的输入框添加<code>wm-form-icon</code>,自由选择图标</div>
+            <!-- 表单验证状态 -->
+            <div class="wm-example">
+    <form class="wm-form">
+        <fieldset>
+            <p>表单验证状态</p>
+            <div class="wm-form-group wm-form-success">
+                <input type="text" placeholder="请输入用户名">
+                <i class="fa fa-check" aria-hidden="true"></i>
+            </div>
+            <div class="wm-form-group wm-form-warning">
+                <input type="text" placeholder="请输入用户名">
+                <i class="fa fa-exclamation-triangle" aria-hidden="true"></i>
+            </div>
+            <div class="wm-form-group wm-form-error">
+                <input type="text" placeholder="请输入用户名">
+                <i class="fa fa-times" aria-hidden="true"></i>
+            </div>
+        </fieldset>
+    </form>
+            </div>
+            <div class="wm-example-code">
+            <span class="wm-tooltip">点击复制</span>
+                <div class="wm-copy" data-clipboard-text="">
+                    <i class="fa fa-copy"></i>
+                    <span>复制</span>
+                </div>
+            <pre class="prettyprint">
+    <form class="wm-form">
+        <fieldset>
+            <p>表单验证状态</p>
+            <div class="wm-form-group wm-form-success">
+                <input type="text" placeholder="请输入用户名">
+                <i class="fa fa-check" aria-hidden="true"></i>
+            </div>
+            <div class="wm-form-group wm-form-warning">
+                <input type="text" placeholder="请输入用户名">
+                <i class="fa fa-exclamation-triangle" aria-hidden="true"></i>
+            </div>
+            <div class="wm-form-group wm-form-error">
+                <input type="text" placeholder="请输入用户名">
+                <i class="fa fa-times" aria-hidden="true"></i>
+            </div>
+        </fieldset>
+    </form>
+            </pre>
+            </div>
+            <div class="wm-intro">表单验证状态：添加<code>wm-form-success</code>,<code>wm-form-waring</code>,<code>wm-form-error</code>可以控制图标的颜色，一般需要配合<code>js</code>使用</div>
+            <!-- 输入框组 -->
+            <div class="wm-example">
+    <form class="wm-form">
+        <fieldset>
+            <div class="wm-form-group">
+                <input type="text" placeholder="请输入用户名">
+            </div>
+            <div class="wm-form-group">
+                <input type="password" placeholder="请输入密码">
+            </div>
+            <div class="wm-form-group">
+                <input type="email" placeholder="请输入邮箱">
+            </div>
+            <div class="wm-checkbox">
+                <input type="checkbox" id="save-1">
+                <label for="save-1">记住密码</label>
+            </div>
+            <div class="wm-form-group">
+                <button type="submit" class="wm-btn wm-btn-danger wm-btn-block">立即登录</button>
+            </div>
+        </fieldset>
+    </form>
+            </div>
+            <div class="wm-example-code">
+            <span class="wm-tooltip">点击复制</span>
+                <div class="wm-copy" data-clipboard-text="">
+                    <i class="fa fa-copy"></i>
+                    <span>复制</span>
+                </div>
+            <pre class="prettyprint">
+    <form class="wm-form">
+        <fieldset>
+            <p>输入框组</p>
+            <div class="wm-form-group">
+                <input type="text" placeholder="请输入用户名">
+            </div>
+            <div class="wm-form-group">
+                <input type="password" placeholder="请输入密码">
+            </div>
+            <div class="wm-form-group">
+                <input type="email" placeholder="请输入邮箱">
+            </div>
+            <div class="wm-checkbox">
+                <input type="checkbox" id="save-1">
+                <label for="save-1">记住密码</label>
+            </div>
+            <div class="wm-form-group">
+                <button type="submit" class="wm-btn wm-btn-danger wm-btn-block">立即登录</button>
+            </div>
+        </fieldset>
+    </form>
+            </pre>
+            </div>
+            <div class="wm-intro">输入框组：提交按钮应用了<code>wm-btn-block</code></div>
+        </section>
+    </main>
+    <div class="wm-help">
+        <i class="fa fa-bars" aria-hidden="true"></i>
+    </div>
+    <footer>
+        <div class="wm-footer">
+            <p class="wm-container">© 2017 WebModule, Inc. Licensed under <a href="http://opensource.org/licenses/MIT" target="_blank">MIT license</a>. </p>
+        </div>
+    </footer>
+    <script type="text/javascript" src="../lib/prettify/prettify.js"></script>
+    <script type="text/javascript" src="../lib/clipboard/clipboard.js"></script>
+    <script type="text/javascript" src="../dist/webmodule.js"></script>
+    <script type="text/javascript" src="../assets/js/main.js"></script>
+</body>
+
+</html>

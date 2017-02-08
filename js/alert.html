@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+
+<head>
+    <meta charset="UTF-8">
+    <title>js组件|webmodule</title>
+    <meta name="keywords" content="webmodule">   
+    <meta name="description" content="webmodule，开源前端组件">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="applicable-device" content="pc,mobile">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <link rel="icon" href="../favicon.ico">
+    <link rel="apple-touch-icon-precomposed" href="../apple-touch-icon-precomposed.png">
+    <link rel="stylesheet" type="text/css" href="../dist/webmodule.css">
+    <link rel="stylesheet" type="text/css" href="../assets/css/main.css">
+    <link rel="stylesheet" type="text/css" href="../lib/prettify/prettify.css">
+</head>
+
+<body onload="prettyPrint()">
+    <nav class="wm-navbar navbar-fixed-top ">
+        <div class="wm-navbar-container clearfix">
+            <a class="wm-navbar-banner" href="../index.html">WebModule</a>
+            <div class="wm-navbar-wap"><i class="fa fa-bars" aria-hidden="true"></i></div>
+            <ul class="wm-navbar-menu">
+                <li><a href="../index.html">首页</a></li>
+                <li><a href="../css/index.html">css组件</a></li>
+                <li class="active"><a href="../js/index.html">js组件</a></li>
+                <li><a href="../web/index.html">web组件</a></li>
+            </ul>
+        </div>
+    </nav>
+    <main class="wm-container ">
+        <aside id="aside">
+            <ul class="wm-list wm-list-border wm-list-link">
+                <li class="wm-active"><a href="./alert.html">警告框(alert)</a></li>
+                <li><a href="./button.html">验证按钮(validate)</a></li>
+                <li><a href="./check.html">复选框(checkbox)</a></li>
+                <li><a href="./collapse.html">折叠面板(collapse)</a></li>
+                <li><a href="./dragbox.html">拖拽框(dragbox)</a></li>
+                <li><a href="./dropdown.html">下拉组件(dropdown)</a></li>
+                <li><a href="./modal.html">模态框(modal)</a></li>
+                <li><a href="./slider.html">轮播图(slider)</a></li>
+                <li><a href="./tab.html">选项卡(tab)</a></li>
+            </ul>
+        </aside>
+        <section id="wm_intro">
+            <!-- 默认 -->
+            <div class="wm-example">
+    <div class="wm-alert-default wm-alert-default">
+    <button class="wm-close">&times;</button>
+        <p>这是单行文本警告框</p>
+    </div>
+            </div>
+            <div class="wm-example-code">
+            <span class="wm-tooltip">点击复制</span>
+                <div class="wm-copy" data-clipboard-text="">
+                    <i class="fa fa-copy"></i>
+                    <span>复制</span>
+                </div>
+            <pre class="prettyprint">
+    <div class="wm-alert-default wm-alert-default">
+    <button class="wm-close">&times;</button>
+        <p>这是单行文本警告框</p>
+    </div>
+            </pre>
+            </div>
+            <div class="wm-intro">默认警告框：在js文件中添加<code>WM.alertBox('.wm-alert-default .wm-close')</code>即可调用函数。</div>
+            <!-- 不同颜色 -->
+            <div class="wm-example">
+    <div class="wm-alert-primary">
+        <button class="wm-close">&times;</button>
+        <p>这是单行文本警告框</p>
+    </div>
+            </div>
+            <div class="wm-example-code">
+            <span class="wm-tooltip">点击复制</span>
+                <div class="wm-copy" data-clipboard-text="">
+                    <i class="fa fa-copy"></i>
+                    <span>复制</span>
+                </div>
+            <pre class="prettyprint">
+    <div class="wm-alert-primary">
+        <button class="wm-close">&times;</button>
+        <p>这是单行文本警告框</p>
+    </div>
+            </pre>
+            </div>
+            <div class="wm-intro">不同颜色：在js文件中添加<code>WM.alertBox('.wm-alert-primary .wm-close')</code>,其中<code>wm-alert-*</code>代表不同颜色，可以是<code>wm-alert-sucess</code>,<code>wm-alert-danger</code>,<code>wm-alert-waring</code>等等</div>
+            <!-- 多行文本 -->
+            <div class="wm-example">
+    <div class="wm-alert-success">
+        <button class="wm-close">&times;</button>
+        <h3>这是一个标题</h3>
+        <p>这是多行文本警告框</p>
+        <p>这是多行文本警告框</p>
+        <p>这是多行文本警告框</p>
+        <p>这是多行文本警告框</p>
+    </div>
+            </div>
+            <div class="wm-example-code">
+            <span class="wm-tooltip">点击复制</span>
+                <div class="wm-copy" data-clipboard-text="">
+                    <i class="fa fa-copy"></i>
+                    <span>复制</span>
+                </div>
+            <pre class="prettyprint">
+    <div class="wm-alert-success">
+        <button class="wm-close">&times;</button>
+        <h3>这是一个标题</h3>
+        <p>这是多行文本警告框</p>
+        <p>这是多行文本警告框</p>
+        <p>这是多行文本警告框</p>
+        <p>这是多行文本警告框</p>
+    </div>
+            </pre>
+            </div>
+            <div class="wm-intro">多行文本警告框：使用方式和单行警告框一样，只不过多加了一些文字</div>
+        </section>
+    </main>
+    <div class="wm-help">
+        <i class="fa fa-bars" aria-hidden="true"></i>
+    </div>
+    <footer>
+        <div class="wm-footer">
+            <p class="wm-container">© 2017 WebModule, Inc. Licensed under <a href="http://opensource.org/licenses/MIT" target="_blank">MIT license</a>. </p>
+        </div>
+    </footer>
+    <script type="text/javascript" src="../lib/prettify/prettify.js"></script>
+    <script type="text/javascript" src="../lib/clipboard/clipboard.js"></script>
+    <script type="text/javascript" src="../dist/webmodule.js"></script>
+    <script type="text/javascript" src="../assets/js/main.js"></script>
+
+    <script type="text/javascript">
+        WM.alertBox('.wm-alert-default .wm-close');
+        WM.alertBox('.wm-alert-primary .wm-close');
+        WM.alertBox('.wm-alert-success .wm-close');
+    </script>
+</body>
+
+</html>

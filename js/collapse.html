@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+
+<head>
+    <meta charset="UTF-8">
+    <title>折叠面板|webmodule</title>
+    <meta name="keywords" content="webmodule">   
+    <meta name="description" content="webmodule，开源前端组件">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="applicable-device" content="pc,mobile">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <link rel="icon" href="../favicon.ico">
+    <link rel="apple-touch-icon-precomposed" href="../apple-touch-icon-precomposed.png">
+    <link rel="stylesheet" type="text/css" href="../dist/webmodule.css">
+    <link rel="stylesheet" type="text/css" href="../assets/css/main.css">
+    <link rel="stylesheet" type="text/css" href="../lib/prettify/prettify.css">
+</head>
+
+<body onload="prettyPrint()">
+    <nav class="wm-navbar navbar-fixed-top ">
+        <div class="wm-navbar-container clearfix">
+            <a class="wm-navbar-banner" href="../index.html">WebModule</a>
+            <div class="wm-navbar-wap"><i class="fa fa-bars" aria-hidden="true"></i></div>
+            <ul class="wm-navbar-menu">
+                <li><a href="../index.html">首页</a></li>
+                <li><a href="../css/index.html">css组件</a></li>
+                <li class="active"><a href="../js/index.html">js组件</a></li>
+                <li><a href="../web/index.html">web组件</a></li>
+            </ul>
+        </div>
+    </nav>
+    <main class="wm-container ">
+        <aside id="aside">
+            <ul class="wm-list wm-list-border wm-list-link">
+                <li><a href="./alert.html">警告框(alert)</a></li>
+                <li><a href="./button.html">验证按钮(validate)</a></li>
+                <li><a href="./check.html">复选框(checkbox)</a></li>
+                <li class="wm-active"><a href="./collapse.html">折叠面板(collapse)</a></li>
+                <li><a href="./dragbox.html">拖拽框(dragbox)</a></li>
+                <li><a href="./dropdown.html">下拉组件(dropdown)</a></li>
+                <li><a href="./modal.html">模态框(modal)</a></li>
+                <li><a href="./slider.html">轮播图(slider)</a></li>
+                <li><a href="./tab.html">选项卡(tab)</a></li>
+            </ul>
+        </aside>
+        <section id="wm_intro">
+            <!-- 折叠面板 -->
+            <div class="wm-example">
+    <ul class="wm-list wm-list-border wm-list-link" id="collapse_list">
+        <li>
+            <a href="#">父列表项一<i class="fa fa-chevron-right fr" aria-hidden="true"></i></a>
+            <ul class="wm-list wm-list-link">
+                <li><a href="#">子列表项1</a></li>
+                <li><a href="#">子列表项2</a></li>
+                <li><a href="#">子列表项3</a></li>
+            </ul>
+        </li>
+        <li>
+            <a href="#">父列表项二<i class="fa fa-chevron-right fr" aria-hidden="true"></i></a>
+            <ul class="wm-list wm-list-link">
+                <li><a href="#">子列表项1</a></li>
+                <li><a href="#">子列表项2</a></li>
+                <li><a href="#">子列表项3</a></li>
+            </ul>
+        </li>
+        <li>
+            <a href="#">父列表项三<i class="fa fa-chevron-right fr" aria-hidden="true"></i></a>
+            <ul class="wm-list wm-list-link">
+                <li><a href="#">子列表项1</a></li>
+                <li><a href="#">子列表项2</a></li>
+                <li><a href="#">子列表项3</a></li>
+            </ul>
+        </li>
+    </ul>
+            </div>
+            <div class="wm-example-code">
+            <span class="wm-tooltip">点击复制</span>
+                <div class="wm-copy" data-clipboard-text="">
+                    <i class="fa fa-copy"></i>
+                    <span>复制</span>
+                </div>
+            <pre class="prettyprint">
+    <ul class="wm-list wm-list-border wm-list-link" id="collapse_list">
+        <li>
+            <a href="#">父列表项一<i class="fa fa-chevron-right fr" aria-hidden="true"></i></a>
+            <ul class="wm-list wm-list-link">
+                <li><a href="#">子列表项1</a></li>
+                <li><a href="#">子列表项2</a></li>
+                <li><a href="#">子列表项3</a></li>
+            </ul>
+        </li>
+        <li>
+            <a href="#">父列表项二<i class="fa fa-chevron-right fr" aria-hidden="true"></i></a>
+            <ul class="wm-list wm-list-link">
+                <li><a href="#">子列表项1</a></li>
+                <li><a href="#">子列表项2</a></li>
+                <li><a href="#">子列表项3</a></li>
+            </ul>
+        </li>
+        <li>
+            <a href="#">父列表项三<i class="fa fa-chevron-right fr" aria-hidden="true"></i></a>
+            <ul class="wm-list wm-list-link">
+                <li><a href="#">子列表项1</a></li>
+                <li><a href="#">子列表项2</a></li>
+                <li><a href="#">子列表项3</a></li>
+            </ul>
+        </li>
+    </ul>
+            </pre>
+            </div>
+            <div class="wm-intro">使用说明：在js文件中添加<code>WM.collapse('#collapse_list')</code>，id可自由命名</div>
+            <!-- 折叠菜单 -->
+            <div class="wm-example">
+    <header>
+        <button id="collapse_menu" class="wm-btn wm-btn-success"><i class="fa fa-bars" aria-hidden="true"></i></button>
+        <nav>
+            <ul class="wm-list wm-list-link">
+                <li><a href="#">菜单选项1</a></li>
+                <li><a href="#">菜单选项2</a></li>
+                <li><a href="#">菜单选项3</a></li>
+            </ul>
+        </nav>
+    </header>
+            </div>
+            <div class="wm-example-code">
+            <span class="wm-tooltip">点击复制</span>
+                <div class="wm-copy" data-clipboard-text="">
+                    <i class="fa fa-copy"></i>
+                    <span>复制</span>
+                </div>
+            <pre class="prettyprint">
+    <header>
+        <button id="collapse_menu" class="wm-btn wm-btn-success"><i class="fa fa-bars" aria-hidden="true"></i>，id可自由命名</button>
+        <nav>
+            <ul class="wm-list wm-list-link">
+                <li><a href="#">菜单选项1</a></li>
+                <li><a href="#">菜单选项2</a></li>
+                <li><a href="#">菜单选项3</a></li>
+            </ul>
+        </nav>
+    </header>
+            </pre>
+            </div>
+            <div class="wm-intro">使用说明：在js文件中添加<code>WM.collapseMenu('#collapse_menu')</code></div>
+        </section>
+    </main>
+    <div class="wm-help">
+        <i class="fa fa-bars" aria-hidden="true"></i>
+    </div>
+    <footer>
+        <div class="wm-footer">
+            <p class="wm-container">© 2017 WebModule, Inc. Licensed under <a href="http://opensource.org/licenses/MIT" target="_blank">MIT license</a>. </p>
+        </div>
+    </footer>
+    <script type="text/javascript" src="../lib/prettify/prettify.js"></script>
+    <script type="text/javascript" src="../lib/clipboard/clipboard.js"></script>
+    <script type="text/javascript" src="../dist/webmodule.js"></script>
+    <script type="text/javascript" src="../assets/js/main.js"></script>
+     <script type="text/javascript">
+        WM.collapse('#collapse_list')
+        WM.collapseMenu('#collapse_menu')
+    </script>
+</body>
+
+</html>

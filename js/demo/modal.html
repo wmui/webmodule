@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="../../dist/webmodule.css">
+    <script type="text/javascript" src="../../dist/webmodule.js"></script>
+    <style type="text/css">
+    body {
+        margin: .5rem;
+        height: 1000px;
+    }
+    </style>
+</head>
+
+<body>
+
+<div id="modal">
+    <button class="wm-btn wm-btn-primary">modal</button>
+    <div class="wm-modal">
+        <div class="wm-modal-content">
+            <span class="wm-close">&times;</span>
+            <h4>这是一个标题</h4>
+            <p>这是一段提示内容这是一段提示内容这是一段提示内容这是一段提示内容这是一段提示内容这是一段提示内容这是一段提示内容这是一段提示内容这是一段提示内容这是一段提示内容这是一段提示内容</p>
+        </div>
+    </div>
+</div>
+
+<div id="alert">
+    <button class="wm-btn wm-btn-primary">alert</button>
+    <div class="wm-alert">
+        <div class="wm-alert-content">
+            <div class="wm-alert-dialog">
+                <h4>这是一个标题</h4>
+                <p>这是一段提示信息,宽度自适应这是一段提示信息,宽度自适应</p>
+            </div>
+            <span class="wm-alert-confirm">确 定</span>
+        </div>
+    </div>
+</div>
+
+<div id="confirm">
+    <button class="wm-btn wm-btn-primary">confirm</button>
+    <div class="wm-confirm">
+        <div class="wm-confirm-content">
+            <div class="wm-confirm-dialog">
+                <h4>这是一个标题</h4>
+                <p>这是一段提示信息,宽度自适应这是一段提示信息,宽度自适应</p>
+            </div>
+            <span class="wm-confirm-cancel">取 消</span>
+            <span class="wm-confirm-confirm">确 定</span>
+        </div>
+    </div>
+</div>
+
+<div id="prompt">
+    <button class="wm-btn wm-btn-primary">prompt</button>
+    <div class="wm-prompt">
+        <div class="wm-prompt-content">
+            <div class="wm-prompt-dialog">
+                <h4>请输入相关信息</h4>
+                <input type="text">
+            </div>
+            <span class="wm-prompt-cancel">取 消</span>
+            <span class="wm-prompt-confirm">提 交</span>
+        </div>
+    </div>
+</div>
+<script type="text/javascript">
+  WM.modal('#modal')
+  WM.alert('#alert')
+  WM.confirm('#confirm')
+  WM.prompt('#prompt')
+</script>
+</body>
+
+</html>

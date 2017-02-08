@@ -1,0 +1,58 @@
+@import url(../webmodule.css);
+/* 分页解决方案  */
+.wm-pagination {
+    width: 100%;
+    text-align: center;
+}
+ .wm-pagination::after {
+	content: " ";
+	clear: both;
+	height:0;
+	width:0;
+	visibility: hidden;
+	display: block;
+} 
+.wm-pagination li {
+    display: inline-block;
+
+}
+
+.wm-pagination li a {
+    display: block;
+    border: 1px solid #E7E7E7;
+    padding: .2rem 1rem;
+    color: #337AB7;  
+}
+
+.wm-pagination .wm-disabled a {
+    color: #333;
+    cursor: default;
+}
+
+.wm-pagination a:hover {
+    text-decoration: none;
+    background-color: #f3f3f3;
+}
+
+.wm-pagination .wm-disabled a:hover {
+    background-color: transparent;
+}
+
+.wm-pagination .wm-active a {
+    background-color: #0E90D2;
+    border-color: #0E90D2;
+    color: #FFF;
+}
+.wm-pagination-prev {
+	float: left;
+}
+.wm-pagination-next {
+	float: right;
+}
+.wm-pagination-left {
+	text-align: left;
+}
+
+.wm-pagination-right {
+	text-align: right;
+}

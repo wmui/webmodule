@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+    <link rel="stylesheet" type="text/css" href="../../dist/webmodule.css">
+    <script type="text/javascript" src="../../dist/webmodule.js"></script>
+    <style type="text/css">	
+		.wm-slider{
+			width: 300px;
+			height: 10px;
+			background: #ccc;
+			position: relative;
+			margin: 100px;
+		}
+		.wm-slider-bar{
+			position: absolute;
+			top: -3px;
+			width: 16px;
+			height: 16px;
+			border-radius: 6px;
+			background: green;
+
+		}
+		.wm-slider-mask{
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 0;
+			height: 10px;
+			background: green;
+		}
+    </style>
+</head>
+<body>
+<div class="wm-slider">
+	<div class="wm-slider-bar"></div>
+	<div class="wm-slider-mask"></div>
+</div>
+<div class="showinfo"></div>
+	<script type="text/javascript">
+		WM.horizontalBar('.wm-slider','.wm-slider-bar','.wm-slider-mask','.showinfo')
+	</script>
+</body>
+</html>

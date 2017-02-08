@@ -1,0 +1,20 @@
+@import url(../webmodule.css);
+.wm-list-article {
+	border:1px solid #ccc;
+	float: right;
+}
+.wm-list-article img {
+	float: left;
+	padding: .5rem;
+}
+img.wm-img-responsive {
+	max-width: 100%;
+	height: auto;
+	display: block;
+}
+
+/* .wm-list-article h3 {
+	overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+} */

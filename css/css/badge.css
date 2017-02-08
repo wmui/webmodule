@@ -1,0 +1,8 @@
+@import url(../webmodule.css);
+.wm-badge {
+	color:#FFF;
+	font-size: .6rem;
+	font-weight: bold;
+	background-color: #E7E7E7;
+	padding: .2rem .3rem;
+}

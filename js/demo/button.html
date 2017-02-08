@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" type="text/css" href="../dist/webmodule.css">
+	<script type="text/javascript" src="../dist/webmodule.js"></script>
+	<style type="text/css">
+		body {
+			margin: .5rem;
+		}
+	</style>
+</head>
+<body>
+	<button class="wm-btn wm-btn-primary btn-loading">
+	点击加载
+	</button>
+	
+	<button class="wm-btn wm-btn-secondary btn-loading">
+	点击加载
+	</button>
+
+	<button class="wm-btn wm-btn-success btn-loading">
+	点击加载
+	</button>
+
+	<button class="wm-btn wm-btn-primary btn-loading-time">点击发送短信</button>
+	<button class="wm-btn wm-btn-secondary btn-loading-time">点击发送短信</button>
+	<button class="wm-btn wm-btn-success btn-loading-time">点击发送短信</button>
+	<script type="text/javascript">
+		WM.validateMessage('.wm-btn-primary.btn-loading-time',5)
+		WM.validateMessage('.wm-btn-secondary.btn-loading-time',5)
+		WM.validateMessage('.wm-btn-success.btn-loading-time',5)
+
+		WM.buttonLoading('.wm-btn-primary.btn-loading',5)
+		WM.buttonLoading('.wm-btn-secondary.btn-loading',5)
+		WM.buttonLoading('.wm-btn-success.btn-loading',5)
+	</script>
+</body>
+</html>

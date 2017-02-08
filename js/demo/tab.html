@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+    <link rel="stylesheet" type="text/css" href="../../dist/webmodule.css">
+    <script type="text/javascript" src="../../dist/webmodule.js"></script>
+	<style type="text/css">
+	.wm-tab{
+		margin: 100px;
+	}
+	.wm-tab-content {
+		width: 295px;
+	}
+	/* css最重要的就是优先级的控制 */
+
+		.wm-tab{
+			width: auto;
+			border: 1px solid #e7e7e7;
+		}
+		.wm-tab,
+		.wm-tab-topbar {
+			overflow: hidden;
+			display: inline-block;
+		}
+		.wm-tab-topbar span{
+			display: block;
+			float: left;
+			padding: .5rem .8rem;
+			text-align: center;	
+			background: #f3f3f3;
+			border-bottom: 1px solid #e7e7e7;		
+		}
+		.wm-tab-topbar span + span {
+			border-left: 1px solid #e7e7e7;
+		}
+		
+		.wm-tab-content li,
+		.wm-tab-content{
+			overflow: hidden;
+		}
+		.wm-tab-content li + li {
+			display: none;
+		}
+		.wm-tab-content {
+			padding: .5rem .8rem;
+		}
+		.wm-tab-topbar .wm-tab-active{
+			background: #fff;
+			color: #337AB7;
+			border-bottom: 0;
+		}
+
+		/* 第二种风格 */
+		.wm-tab.wm-tab-auto,
+		.wm-tab.wm-tab-auto .wm-tab-topbar {
+			display: block;
+			border: 0;
+			margin-bottom: -1px;
+		}
+		.wm-tab.wm-tab-auto .wm-tab-content {
+			width: 100%;
+			border: 1px solid #e7e7e7;
+		}
+		.wm-tab.wm-tab-auto .wm-tab-topbar span {
+			border: 0;
+			background: #fff;
+		}
+		.wm-tab.wm-tab-auto .wm-tab-topbar .wm-tab-active {
+			background: #fff;
+			border: 1px solid #e7e7e7;
+			border-bottom: 0;
+		}
+		/* 梯形风格 */
+
+	</style>
+</head>
+<body>
+	<div class="wm-tab" id="one">
+		<div class="wm-tab-topbar">
+			<span class="wm-tab-active">选项卡</span>
+			<span>选项卡</span>
+			<span>选项卡</span>
+			<span>选项卡</span>
+		</div>
+
+		<div class="wm-tab-content">
+		<ul>
+			<li>这是段落一。这是段落一。这是段落一。这是段落一。这是段落一。这是段落一。这是段落一。这是段落一。这是段落一。这是段落一。这是段落一。这是段落一。这是段落一。</li>
+			<li>这是段落二。这是段落二。这是段落二。这是段落二。这是段落二。这是段落二。这是段落二。这是段落二。这是段落二。这是段落二。这是段落二。这是段落二。这是段落二。</li>
+			<li>这是段落三。这是段落三。这是段落三。这是段落三。这是段落三。这是段落三。这是段落三。这是段落三。这是段落三。这是段落三。这是段落三。这是段落三。</li>
+			<li>这是段落四。这是段落四。这是段落四。这是段落四。这是段落四。这是段落四。这是段落四。这是段落四。这是段落四。</li>
+		</ul>
+		</div>
+	</div>
+
+	<div class="wm-tab wm-tab-auto" id="two">
+		<div class="wm-tab-topbar">
+			<span class="wm-tab-active">选项卡</span>
+			<span>选项卡</span>
+			<span>选项卡</span>
+			<span>选项卡</span>
+		</div>
+
+		<div class="wm-tab-content">
+			<ul>
+			<li>1段落</li>
+			<li>2段落</li>
+			<li>3段落</li>
+			<li>4段落</li>
+		</ul>
+		</div>
+	</div>
+
+	<script type="text/javascript">
+	WM.tab('#one')
+	WM.tab('#two')
+	</script>
+</body>
+</html>

@@ -1,0 +1,60 @@
+@import url(../webmodule.css);
+.wm-article{
+	padding:.5rem 1rem;
+	position: relative;
+	background-image: linear-gradient(-150deg, transparent 1.5rem, #FFF 0);
+}
+.wm-article::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 1.73rem;
+        height: 3rem;
+        background: linear-gradient(to left bottom, transparent 50%, rgba(243, 243, 243, .2) 0, rgba(243, 243, 243, .4)) no-repeat 100% 0;
+        transform: translateY(-1.3rem) rotate(-30deg);
+        transform-origin: bottom right;
+        border-bottom-left-radius: .5rem;
+        box-shadow: -.2rem .2rem .3rem -.1rem rgba(0, 0, 0, .15);
+    }
+.wm-article-head {
+	text-align: center;
+}
+.wm-article-meta {
+	font-size: .8rem;
+}
+.wm-article-meta span + span{
+	padding-left: .8rem;
+}
+.wm-article-meta i.fa
+{
+	padding-right:.3rem;
+}
+.wm-article-title {
+	padding:1rem;
+}
+.wm-article-lead {
+	background-color: #f3f3f3;
+	border:1px solid #E7E7E7;
+	padding:.5rem 1rem;
+	color:#666;
+	margin-bottom: 1rem;
+	border-radius: .2rem;
+}
+.wm-article-divider {
+	border:0;
+	height:1px;
+	background-color: #E7E7E7;
+	margin:1rem auto;
+}
+/* 折角效果 */
+.wm-article {
+	
+}
+/* 引用 */
+blockquote {
+	border-left:.3rem solid #3BB4F2;
+	padding-left: 1rem;
+	margin-left: 0;
+	font-style: italic;
+}

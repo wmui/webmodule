@@ -1,0 +1,62 @@
+@import url(../webmodule.css);
+.wm-btn-group {
+    display: inline-block;
+}
+
+.wm-btn-group .wm-btn-default {
+    border-color: #d4d4d4;
+}
+
+.wm-btn-group .wm-btn-primary {
+    border-color: #0c79b1;
+}
+
+.wm-btn-group .wm-btn-secondary {
+    border-color: #19a7f0;
+}
+
+.wm-btn-group .wm-btn-success {
+    border-color: #4aaa4a;
+}
+
+.wm-btn-group .wm-btn-warning {
+    border-color: #ea6e0c;
+}
+
+.wm-btn-group .wm-btn-danger {
+    border-color: #d93c37;
+}
+
+.wm-btn-group button {
+    float: left;
+}
+
+.wm-btn-group button + button {
+    margin-left: -1px;
+}
+
+
+/* 圆角按钮组 */
+
+.wm-btn-group button.wm-radius:not(:first-child) {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+}
+
+.wm-btn-group button.wm-radius:not(:last-child) {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+
+/* 圆形按钮组 */
+
+.wm-btn-group button.wm-round:not(:first-child) {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+}
+
+.wm-btn-group button.wm-round:not(:last-child) {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+}

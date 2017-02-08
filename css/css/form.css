@@ -1,0 +1,241 @@
+@import url(../webmodule.css);
+.wm-form select,
+.wm-form textarea,
+.wm-form input[type="text"],
+.wm-form input[type="password"],
+.wm-form input[type="datetime"],
+.wm-form input[type="datetime-local"],
+.wm-form input[type="date"],
+.wm-form input[type="month"],
+.wm-form input[type="time"],
+.wm-form input[type="week"],
+.wm-form input[type="number"],
+.wm-form input[type="email"],
+.wm-form input[type="url"],
+.wm-form input[type="search"],
+.wm-form input[type="tel"],
+.wm-form input[type="color"] {
+    display: block;
+    width: 100%;
+    padding: .6rem;
+    border: 1px solid #CCC;
+}
+
+.wm-form-group {
+    margin-bottom: 1rem;
+}
+
+
+/* 获得焦点 */
+
+.wm-form select:focus,
+.wm-form textarea:focus,
+.wm-form input[type="text"]:focus,
+.wm-form input[type="password"]:focus,
+.wm-form input[type="datetime"]:focus,
+.wm-form input[type="datetime-local"]:focus,
+.wm-form input[type="date"]:focus,
+.wm-form input[type="month"]:focus,
+.wm-form input[type="time"]:focus,
+.wm-form input[type="week"]:focus,
+.wm-form input[type="number"]:focus,
+.wm-form input[type="email"]:focus,
+.wm-form input[type="url"]:focus,
+.wm-form input[type="search"]:focus,
+.wm-form input[type="tel"]:focus,
+.wm-form input[type="color"]:focus,
+.wm-input-group .wm-input-field:focus {
+    border-color: #0E90D2;
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075), 0 0 5px rgba(59, 180, 242, 0.3);
+}
+
+
+/* 文件选择 */
+
+.wm-form input[type="file"] {
+    position: absolute;
+    top: 50%;
+    margin-top: -.8rem;
+    z-index: -1;
+    vertical-align: middle;
+}
+
+.wm-form .wm-file {
+    display: inline-block;
+    position: relative;
+    padding: .3rem 1rem;
+    margin: .8rem 0 .8rem 0;
+    color: #FFF;
+    border: 1px solid transparent;
+    cursor: pointer;
+    background-color: #56B356;
+}
+
+.wm-form .wm-file:hover,
+.wm-form .wm-file:focus {
+    background-color: #4aaa4a;
+}
+
+
+/* 复选框 */
+
+.wm-checkbox input[type="checkbox"] {
+    position: absolute;
+    clip: rect(0, 0, 0, 0);
+}
+
+.wm-checkbox input[type="checkbox"] + label::before {
+    content: "\a0";
+    display: inline-block;
+    width: 1rem;
+    height: 1rem;
+    line-height: 1rem;
+    background-color: #56B356;
+    border-radius: .2rem;
+    margin-right: .5rem;
+}
+
+.wm-checkbox input[type="checkbox"]:checked + label::before {
+    content: "\2713";
+    color: white;
+    font-weight: bold;
+}
+
+
+/* 单选框 */
+
+.wm-radio input[type="radio"] {
+    position: absolute;
+    clip: rect(0, 0, 0, 0);
+}
+
+.wm-radio input[type="radio"] + label::before {
+    content: "\a0";
+    display: inline-block;
+    width: 1rem;
+    height: 1rem;
+    line-height: 1rem;
+    background-color: #DD514C;
+    border-radius: .5rem;
+    margin-right: .5rem;
+}
+
+.wm-radio input[type="radio"]:checked + label::before {
+    content: "\2713";
+    color: white;
+    font-weight: bold;
+}
+
+
+/* 禁止状态 */
+
+.wm-form input[type="checkbox"]:disabled + label::before,
+.wm-form input[type="radio"]:disabled + label::before {
+    opacity: .65;
+    cursor: not-allowed;
+}
+
+
+/* 水平排列 */
+
+.wm-form-horizontal .wm-form-group input {
+    width: 80%;
+    display: inline-block;
+}
+
+.wm-form-horizontal .wm-form-group label {
+    text-align: right;
+    width: 10%;
+    display: inline-block;
+}
+
+.wm-form-offset::before {
+    content: " ";
+    width:10%;
+    display: inline-block;
+}
+
+.wm-form-offset button {
+    width: 80%;
+}
+
+
+/* 行内排列 */
+
+.wm-form-inline .wm-form-group,
+.wm-form-inline .wm-checkbox {
+    display: inline-block;
+    vertical-align: top;
+}
+
+.wm-form-inline .wm-checkbox {
+    line-height: 2.5rem;
+}
+
+
+/* icon 表单 */
+
+.wm-form .wm-form-icon {
+    position: relative;
+}
+
+.wm-form .wm-form-icon i.fa,
+.wm-form .wm-form-icon span.fa {
+    position: absolute;
+    top: .7rem;
+    left: .5rem;
+}
+
+.wm-form .wm-form-icon input {
+    text-indent: 1rem;
+}
+
+
+/* 验证状态 */
+
+.wm-form .wm-form-success,
+.wm-form .wm-form-warning,
+.wm-form .wm-form-error {
+    position: relative;
+}
+
+.wm-form .wm-form-success input,
+.wm-form .wm-form-success input:focus {
+    border-color: #56B356;
+}
+
+.wm-form .wm-form-warning input,
+.wm-form .wm-form-warning input:focus {
+    border-color: #F37B1D;
+}
+
+.wm-form .wm-form-error input,
+.wm-form .wm-form-error input:focus {
+    border-color: #DD514C;
+}
+
+.wm-form .wm-form-success i,
+.wm-form .wm-form-success span,
+.wm-form .wm-form-warning i,
+.wm-form .wm-form-warning span,
+.wm-form .wm-form-error i,
+.wm-form .wm-form-error span {
+    position: absolute;
+    right: .5rem;
+    top: .5rem;
+}
+
+.wm-form .wm-form-success i,
+.wm-form .wm-form-success span {
+    color: #56B356;
+}
+
+.wm-form .wm-form-warning i,
+.wm-form .wm-form-warning span {
+    color: #F37B1D;
+}
+
+.wm-form .wm-form-error i,
+.wm-form .wm-form-error span {
+    color: #DD514C;
+}

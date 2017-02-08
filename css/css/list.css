@@ -1,0 +1,42 @@
+@import url(../webmodule.css);
+.wm-list li + li {
+	border-top: 1px solid #E7E7E7;
+}
+.wm-list li{
+	padding:.5rem 0;
+}
+/* text overflow */
+.wm-text-truncate {
+	text-overflow:ellipsis;
+	white-space: nowrap;
+	overflow: hidden;
+}
+/* list border */
+.wm-list-border {
+	border:1px solid #E7E7E7;
+}
+.wm-list-border li {
+	padding:.5rem .8rem;
+}
+/* list hover */
+.wm-list-hover li:hover {
+	background-color: #F3F3F3;
+}
+/* list striped */
+.wm-list-striped li:nth-child(even) {
+	background-color: #F3F3F3;
+}
+.wm-list i.fa {
+	padding-right:.5rem;
+}
+.wm-list.wm-list-link li {
+	padding:0;
+}
+.wm-list.wm-list-link li a {
+	display: block;
+	width:100%;
+	padding:.5rem .8rem;
+}
+.wm-list li a:hover{
+	background-color: #f3f3f3;
+}

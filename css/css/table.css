@@ -1,0 +1,66 @@
+@import url(../webmodule.css);
+.wm-table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+}
+
+.wm-table>thead>tr>th {
+    border-bottom: 1px solid #E7E7E7;
+    text-align: left;
+    padding: .5rem;
+    font-weight: bold;
+}
+
+.wm-table>tbody>tr>td {
+    padding: .5rem;
+    vertical-align: top;
+    border-top: 1px solid #E7E7E7;
+}
+
+.wm-table-bordered {
+    border: 1px solid #E7E7E7;
+}
+
+.wm-table-bordered > thead > tr > th + th,
+.wm-table-bordered > tbody > tr > td + td {
+    border-left: 1px solid #E7E7E7;
+}
+
+.wm-table-stripes > tbody > tr:nth-child(odd) {
+    background-color: #F9F9F9;
+}
+
+.wm-table-hover > tbody > tr:hover {
+    background-color: #F9F9F9;
+}
+
+.wm-table-responsive {
+    overflow-x: scroll;
+    white-space: nowrap;
+}
+
+.wm-table-primary {
+    color: #0E90D2;
+    background-color: #E3F2FA;
+}
+
+.wm-table-secondary {
+    color: #3BB4F2;
+    background-color: #E5FAE8;
+}
+
+.wm-table-success {
+    color: #56B356;
+    background-color: #EDF7ED;
+}
+
+.wm-table-warning {
+    color: #F37B1D;
+    background-color: #FEF0E5;
+}
+
+.wm-table-danger {
+    color: #DD514C;
+    background-color: #FFDEDE;
+}

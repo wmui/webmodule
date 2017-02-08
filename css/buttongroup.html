@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+
+<head>
+    <meta charset="UTF-8">
+    <title>buttongroup按钮组|webmodule</title>
+    <meta name="keywords" content="webmodule">   
+    <meta name="description" content="webmodule，开源前端组件">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="applicable-device" content="pc,mobile">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <link rel="icon" href="../favicon.ico">
+    <link rel="apple-touch-icon-precomposed" href="../apple-touch-icon-precomposed.png">
+    <link rel="stylesheet" type="text/css" href="../dist/webmodule.css">
+    <link rel="stylesheet" type="text/css" href="../assets/css/main.css">
+    <link rel="stylesheet" type="text/css" href="../lib/prettify/prettify.css">
+</head>
+
+<body onload="prettyPrint()">
+    <nav class="wm-navbar navbar-fixed-top ">
+        <div class="wm-navbar-container clearfix">
+            <a class="wm-navbar-banner" href="../index.html">WebModule</a>
+            <div class="wm-navbar-wap"><i class="fa fa-bars" aria-hidden="true"></i></div>
+            <ul class="wm-navbar-menu">
+                <li><a href="../index.html">首页</a></li>
+                <li class="active"><a href="../css/index.html">css组件</a></li>
+                <li><a href="../js/index.html">js组件</a></li>
+                <li><a href="../web/index.html">web组件</a></li>
+            </ul>
+        </div>
+    </nav>
+    <main class="wm-container ">
+        <aside id="aside">
+            <ul class="wm-list wm-list-border wm-list-link">
+                <li><a href="badge.html">徽章(badge)</a></li>
+                <li><a href="breadcrumd.html">面包屑(breadcrumd)</a></li>
+                <li><a href="button.html">按钮(button)</a></li>
+                <li class="wm-active"><a href="buttongroup.html">按钮组(buttongroup)</a></li>
+                <li><a href="form.html">表单(form)</a></li>
+                <li><a href="grid.html">布局(grid)</a></li>
+                <li><a href="icon.html">图标(icon)</a></li>
+                <li><a href="inputgroup.html">输入框组(inputgroup)</a></li>
+                <li><a href="list.html">列表(list)</a></li>
+                <li><a href="pagination.html">分页(pagination)</a></li>
+                <li><a href="panel.html">面板(panel)</a></li>
+                <li><a href="progress.html">进度条(progress)</a></li>
+                <li><a href="table.html">表格(table)</a></li>
+                <li><a href="thumbnail.html">缩略图(thumbnail)</a></li>
+            </ul>
+        </aside>
+        <section id="wm_intro">
+            <!-- 默认按钮组 -->
+            <div class="wm-example">
+    <div class="wm-btn-group">
+        <button type="button" class="wm-btn wm-btn-default">默认样式</button>
+        <button type="button" class="wm-btn wm-btn-default">默认样式</button>
+        <button type="button" class="wm-btn wm-btn-default">默认样式</button>
+        <button type="button" class="wm-btn wm-btn-default">默认样式</button>
+        <button type="button" class="wm-btn wm-btn-default">默认样式</button>     
+    </div>
+            </div>
+            <div class="wm-example-code">
+            <span class="wm-tooltip">点击复制</span>
+                <div class="wm-copy" data-clipboard-text="">
+                    <i class="fa fa-copy"></i>
+                    <span>复制</span>
+                </div>
+            <pre class="prettyprint">
+    <div class="wm-btn-group">
+        <button type="button" class="wm-btn wm-btn-default">默认样式</button>
+        <button type="button" class="wm-btn wm-btn-default">默认样式</button>
+        <button type="button" class="wm-btn wm-btn-default">默认样式</button>
+        <button type="button" class="wm-btn wm-btn-default">默认样式</button>
+        <button type="button" class="wm-btn wm-btn-default">默认样式</button>    
+    </div>
+            </pre>
+            </div>
+            <div class="wm-intro">默认样式：<code>wm-btn-group</code>必须，<code>wm-btn-*</code>控制按钮组颜色</div>
+            <!-- 圆角样式 -->
+            <div class="wm-example">
+    <div class="wm-btn-group">
+        <button type="button" class="wm-btn wm-btn-primary wm-radius">主色按钮</button>
+        <button type="button" class="wm-btn wm-btn-primary wm-radius">主色按钮</button>
+        <button type="button" class="wm-btn wm-btn-primary wm-radius">主色按钮</button>
+        <button type="button" class="wm-btn wm-btn-primary wm-radius">主色按钮</button>
+        <button type="button" class="wm-btn wm-btn-primary wm-radius">主色按钮</button>
+    </div>
+            </div>
+            <div class="wm-example-code">
+            <span class="wm-tooltip">点击复制</span>
+                <div class="wm-copy" data-clipboard-text="">
+                    <i class="fa fa-copy"></i>
+                    <span>复制</span>
+                </div>
+            <pre class="prettyprint">
+    <div class="wm-btn-group">
+        <button type="button" class="wm-btn wm-btn-primary wm-radius">主色按钮</button>
+        <button type="button" class="wm-btn wm-btn-primary wm-radius">主色按钮</button>
+        <button type="button" class="wm-btn wm-btn-primary wm-radius">主色按钮</button>
+        <button type="button" class="wm-btn wm-btn-primary wm-radius">主色按钮</button>
+        <button type="button" class="wm-btn wm-btn-primary wm-radius">主色按钮</button>
+    </div>
+            </pre>
+            </div>
+            <div class="wm-intro">圆角样式：在默认基础上加<code>wm-btn-radius</code>，两边拥有圆角</div>
+            <!-- 圆形样式 -->
+            <div class="wm-example">
+    <div class="wm-btn-group">  
+        <button type="button" class="wm-btn wm-btn-warning wm-round">橙色按钮</button>
+        <button type="button" class="wm-btn wm-btn-warning wm-round">橙色按钮</button>
+        <button type="button" class="wm-btn wm-btn-warning wm-round">橙色按钮</button>
+        <button type="button" class="wm-btn wm-btn-warning wm-round">橙色按钮</button>
+        <button type="button" class="wm-btn wm-btn-warning wm-round">橙色按钮</button>
+    </div>
+            </div>
+            <div class="wm-example-code">
+            <span class="wm-tooltip">点击复制</span>
+                <div class="wm-copy" data-clipboard-text="">
+                    <i class="fa fa-copy"></i>
+                    <span>复制</span>
+                </div>
+            <pre class="prettyprint">
+    <div class="wm-btn-group">  
+        <button type="button" class="wm-btn wm-btn-warning wm-round">橙色按钮</button>
+        <button type="button" class="wm-btn wm-btn-warning wm-round">橙色按钮</button>
+        <button type="button" class="wm-btn wm-btn-warning wm-round">橙色按钮</button>
+        <button type="button" class="wm-btn wm-btn-warning wm-round">橙色按钮</button>
+        <button type="button" class="wm-btn wm-btn-warning wm-round">橙色按钮</button>
+    </div>
+            </pre>
+            </div>
+            <div class="wm-intro">圆形样式：在默认基础上加<code>wm-btn-round</code>，两边拥有圆形</div>
+            <!-- 镂空按钮组 -->
+            <div class="wm-example">
+    <div class="wm-btn-group">
+        <button type="button" class="wm-btn wm-btn-primary wm-pierced">方角镂空</button>
+        <button type="button" class="wm-btn wm-btn-primary wm-pierced">方角镂空</button>
+        <button type="button" class="wm-btn wm-btn-primary wm-pierced">方角镂空</button>
+        <button type="button" class="wm-btn wm-btn-primary wm-pierced">方角镂空</button>
+        <button type="button" class="wm-btn wm-btn-primary wm-pierced">方角镂空</button>
+    </div>
+            </div>
+            <div class="wm-example-code">
+            <span class="wm-tooltip">点击复制</span>
+                <div class="wm-copy" data-clipboard-text="">
+                    <i class="fa fa-copy"></i>
+                    <span>复制</span>
+                </div>
+            <pre class="prettyprint">
+    <div class="wm-btn-group">
+        <button type="button" class="wm-btn wm-btn-primary wm-pierced">方角镂空</button>
+        <button type="button" class="wm-btn wm-btn-primary wm-pierced">方角镂空</button>
+        <button type="button" class="wm-btn wm-btn-primary wm-pierced">方角镂空</button>
+        <button type="button" class="wm-btn wm-btn-primary wm-pierced">方角镂空</button>
+        <button type="button" class="wm-btn wm-btn-primary wm-pierced">方角镂空</button>
+    </div>
+            </pre>
+            </div>
+            <div class="wm-intro">方角镂空：在默认基础上加<code>wm-pierced</code></div>
+            <!-- 圆角镂空 -->
+            <div class="wm-example">
+    <div class="wm-btn-group">
+        <button type="button" class="wm-btn wm-btn-success wm-radius wm-pierced">圆角镂空</button>
+        <button type="button" class="wm-btn wm-btn-success wm-radius wm-pierced">圆角镂空</button>
+        <button type="button" class="wm-btn wm-btn-success wm-radius wm-pierced">圆角镂空</button>
+        <button type="button" class="wm-btn wm-btn-success wm-radius wm-pierced">圆角镂空</button>
+        <button type="button" class="wm-btn wm-btn-success wm-radius wm-pierced">圆角镂空</button>
+    </div>
+            </div>
+            <div class="wm-example-code">
+            <span class="wm-tooltip">点击复制</span>
+                <div class="wm-copy" data-clipboard-text="">
+                    <i class="fa fa-copy"></i>
+                    <span>复制</span>
+                </div>
+            <pre class="prettyprint">
+    <div class="wm-btn-group">
+        <button type="button" class="wm-btn wm-btn-success wm-radius wm-pierced">圆角镂空</button>
+        <button type="button" class="wm-btn wm-btn-success wm-radius wm-pierced">圆角镂空</button>   
+        <button type="button" class="wm-btn wm-btn-success wm-radius wm-pierced">圆角镂空</button>
+        <button type="button" class="wm-btn wm-btn-success wm-radius wm-pierced">圆角镂空</button>
+        <button type="button" class="wm-btn wm-btn-success wm-radius wm-pierced">圆角镂空</button>
+    </div>
+            </pre>
+            </div>
+            <div class="wm-intro">圆角镂空：在默认镂空状态下，添加<code>wm-radius</code></div>
+            <!-- 圆形镂空 -->
+            <div class="wm-example">
+    <div class="wm-btn-group">  
+        <button type="button" class="wm-btn wm-btn-success wm-round wm-pierced">圆形镂空</button>
+        <button type="button" class="wm-btn wm-btn-success wm-round wm-pierced">圆形镂空</button>
+        <button type="button" class="wm-btn wm-btn-success wm-round wm-pierced">圆形镂空</button>
+        <button type="button" class="wm-btn wm-btn-success wm-round wm-pierced">圆形镂空</button>
+        <button type="button" class="wm-btn wm-btn-success wm-round wm-pierced">圆形镂空</button>
+    </div>
+            </div>
+            <div class="wm-example-code">
+            <span class="wm-tooltip">点击复制</span>
+                <div class="wm-copy" data-clipboard-text="">
+                    <i class="fa fa-copy"></i>
+                    <span>复制</span>
+                </div>
+            <pre class="prettyprint">
+    <div class="wm-btn-group">  
+        <button type="button" class="wm-btn wm-btn-success wm-round wm-pierced">圆形镂空</button>
+        <button type="button" class="wm-btn wm-btn-success wm-round wm-pierced">圆形镂空</button>
+        <button type="button" class="wm-btn wm-btn-success wm-round wm-pierced">圆形镂空</button>
+        <button type="button" class="wm-btn wm-btn-success wm-round wm-pierced">圆形镂空</button>
+        <button type="button" class="wm-btn wm-btn-success wm-round wm-pierced">圆形镂空</button>
+    </div>
+            </pre>
+            </div>
+            <div class="wm-intro">圆形镂空：在默认镂空状态下，添加<code>wm-round</code></div>
+            <!-- 工具栏 -->
+            <div class="wm-example">
+    <div class="wm-btn-group">
+        <button type="button" class="wm-btn wm-btn-success"><i class="fa fa-bars" aria-hidden="true"></i></button>
+        <button type="button" class="wm-btn wm-btn-success"><i class="fa fa-etsy" aria-hidden="true"></i></button>
+        <button type="button" class="wm-btn wm-btn-success"><i class="fa fa-quora" aria-hidden="true"></i></button>
+        <button type="button" class="wm-btn wm-btn-success"><i class="fa fa-coffee" aria-hidden="true"></i></button>
+        <button type="button" class="wm-btn wm-btn-success"><i class="fa fa-crop aria-hidden="true"></i></button>    
+    </div>
+            </div>
+            <div class="wm-example-code">
+            <span class="wm-tooltip">点击复制</span>
+                <div class="wm-copy" data-clipboard-text="">
+                    <i class="fa fa-copy"></i>
+                    <span>复制</span>
+                </div>
+            <pre class="prettyprint">
+    <div class="wm-btn-group">
+        <button type="button" class="wm-btn wm-btn-success"><i class="fa fa-bars" aria-hidden="true"></i></button>
+        <button type="button" class="wm-btn wm-btn-success"><i class="fa fa-etsy" aria-hidden="true"></i></button>
+        <button type="button" class="wm-btn wm-btn-success"><i class="fa fa-quora" aria-hidden="true"></i></button>
+        <button type="button" class="wm-btn wm-btn-success"><i class="fa fa-coffee" aria-hidden="true"></i></button>
+        <button type="button" class="wm-btn wm-btn-success"><i class="fa fa-crop aria-hidden="true"></i></button>    
+    </div>
+            </pre>
+            </div>
+            <div class="wm-intro">工具栏样式：在<code>i</code>标签内添加需要的图标</div>
+        </section>
+    </main>
+    <div class="wm-help">
+        <i class="fa fa-bars" aria-hidden="true"></i>
+    </div>
+    <footer>
+        <div class="wm-footer">
+            <p class="wm-container">© 2017 WebModule, Inc. Licensed under <a href="http://opensource.org/licenses/MIT" target="_blank">MIT license</a>. </p>
+        </div>
+    </footer>
+    <script type="text/javascript" src="../lib/prettify/prettify.js"></script>
+    <script type="text/javascript" src="../lib/clipboard/clipboard.js"></script>
+    <script type="text/javascript" src="../dist/webmodule.js"></script>
+    <script type="text/javascript" src="../assets/js/main.js"></script>
+</body>
+
+</html>

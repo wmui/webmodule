@@ -1,0 +1,79 @@
+@import url(../webmodule.css);
+.wm-panel {
+    border: 1px solid #E7E7E7;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, .1);
+}
+
+.wm-panel .wm-panel-head,
+.wm-panel .wm-panel-body,
+.wm-panel .wm-panel-footer {
+    padding: .5rem .8rem;
+}
+
+.wm-panel .wm-panel-head {
+    background-color: #F3F3F3;
+    border-bottom: 1px solid #E7E7E7;
+}
+
+.wm-panel .wm-panel-footer {
+    background-color: #F3F3F3;
+    border-top: 1px solid #E7E7E7;
+}
+
+
+/* 面板 颜色 */
+
+.wm-panel-primary .wm-panel-head,
+.wm-panel-primary .wm-panel-footer {
+    color: #FFF;
+    background-color: #0E90D2;
+    border-color: #0E90D2;
+}
+
+.wm-panel.wm-panel-primary {
+    border-color: #0E90D2;
+}
+
+.wm-panel-secondary .wm-panel-head,
+.wm-panel-secondary .wm-panel-footer {
+    color: #3BB4F2;
+    background-color: #E5FAE8;
+    border-color: #CAEBFB;
+}
+
+.wm-panel.wm-panel-secondary {
+    border-color: #CAEBFB;
+}
+
+.wm-panel-success .wm-panel-head,
+.wm-panel-success .wm-panel-footer {
+    color: #56B356;
+    background-color: #EDF7ED;
+    border-color: #C9E7C9;
+}
+
+.wm-panel.wm-panel-success {
+    border-color: #C9E7C9;
+}
+
+.wm-panel-warning .wm-panel-head,
+.wm-panel-warning .wm-panel-footer {
+    color: #F37B1D;
+    background-color: #FEF0E5;
+    border-color: #FBD0AE;
+}
+
+.wm-panel.wm-panel-warning {
+    border-color: #FBD0AE;
+}
+
+.wm-panel-danger .wm-panel-head,
+.wm-panel-danger .wm-panel-footer {
+    color: #DD514C;
+    background-color: #FFDEDE;
+    border-color: #F5CECD;
+}
+
+.wm-panel.wm-panel-danger {
+    border-color: #F5CECD;
+}

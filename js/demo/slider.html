@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="../../dist/webmodule.css">
+    <script type="text/javascript" src="../../dist/webmodule.js"></script>
+    <style type="text/css">
+    body {
+        background: #f3f3f3;
+    }
+    
+    .wm-slider {
+        position: relative;
+        overflow: hidden;
+        width: 100%;
+    }
+    
+    .wm-slider .wm-slider-main img,
+    .wm-slider .wm-slider-main li {
+        display: block;
+        width: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+    
+    .wm-slider .wm-slider-ctrl {
+        position: absolute;
+        bottom: 10px;
+        left: 50%;
+        width: 60%;
+        padding-left: 0;
+        margin-left: -30%;
+        text-align: center;
+    }
+    
+    .wm-slider .wm-slider-ctrl li {
+        display: inline-block;
+        width: 10px;
+        height: 10px;
+        margin: 1px;
+        text-indent: -9999px;
+        cursor: pointer;
+        background-color: rgba(0, 0, 0, 0);
+        border: 1px solid #fff;
+        border-radius: 10px;
+    }
+    
+    .wm-slider .wm-slider-ctrl li + li {
+        margin-left: 5px;
+    }
+    
+    .wm-slider .wm-slider-ctrl li.wm-slider-active {
+        background: #fff;
+    }
+    
+    .wm-slider .wm-slider-arrow {
+        color: #FFF;
+        opacity: .5;
+        text-indent: -9999px;
+    }
+    
+    .wm-slider .slider-arrow-left,
+    .wm-slider .slider-arrow-right {
+        position: absolute;
+        font-size: 2rem;
+        top: 50%;
+        margin-top: -2rem;
+        cursor: pointer;
+        padding: 1rem;
+    }
+    
+    .wm-slider .slider-arrow-left {
+        left: 5%;
+    }
+    
+    .wm-slider .slider-arrow-right {
+        right: 5%;
+    }
+    </style>
+</head>
+
+<body>
+<button id="btn">btn</button>
+    <div class="wm-slider" id="wm_slider">
+        <ul class="wm-slider-main">
+            <li>
+                <a href="javascript:;"><img src="../images/first.svg" alt=""></a>
+            </li>
+            <li>
+                <a href="javascript:;"><img src="../images/second.svg" alt=""></a>
+            </li>
+            <li>
+                <a href="javascript:;"><img src="../images/third.svg" alt=""></a>
+            </li>
+        </ul>
+        <ol class="wm-slider-ctrl"></ol>
+        <ol class="wm-slider-arrow">
+            <li class="slider-arrow-left"><i class="fa fa-chevron-left"></i></li>
+            <li class="slider-arrow-right"><i class="fa fa-chevron-right"></i></li>
+        </ol>
+    </div>
+    <script type="text/javascript">
+    // 设置高度
+    function resizeHeight(dom) {
+        var height = WM.height('.wm-slider .wm-slider-main img');
+        WM.css(dom, 'height', height + 'px');
+    }
+    resizeHeight('.wm-slider')
+    WM.on(window, 'resize', function() {
+            resizeHeight('.wm-slider')
+        })
+        // 轮播
+        // 动态创建小圆点
+    var imgs = WM.all('.wm-slider-main')[0].children;
+    var arrows = WM.all('.wm-slider-arrow')[0].children;
+    var arr = [];
+    for (var i = 0, length1 = arrows.length; i < length1; i++) {
+        arr.push(arrows[i]);
+    }
+    for (var i = 0, length1 = imgs.length; i < length1; i++) {
+        var li = document.createElement('li');
+        li.innerHTML = i;
+        WM.all('.wm-slider-ctrl')[0].appendChild(li);
+    }
+    var ctrls = WM.all('.wm-slider-ctrl')[0].children;
+    ctrls[0].className = 'wm-slider-active';
+    for (var i = 0, length1 = ctrls.length; i < length1; i++) {
+        arr.push(ctrls[i]);
+    }
+    // 做准备运动
+    var sliderWidth = WM.width('.wm-slider');
+    for (var i = 1, length1 = imgs.length; i < length1; i++) {
+        imgs[i].style.left = sliderWidth + 'px';
+    }
+    var key = 0;
+    for (var k in arr) {
+        WM.on(arr[k], 'click', WM.throttle(function(){
+            if (this.className == 'slider-arrow-left') {
+                WM.animate(imgs[key], {
+                    left: sliderWidth
+                },10);
+                key--;
+                key < 0 ? key = imgs.length - 1 : key;
+                imgs[key].style.left = -sliderWidth + "px";
+                WM.animate(imgs[key], {
+                    left: 0
+                },10);
+                pointLight()
+            } else if (this.className == 'slider-arrow-right') {
+                WM.animate(imgs[key], {
+                    left: -sliderWidth
+                },10);
+                key >= imgs.length - 1 ? key = 0 : key;
+                key++;
+                imgs[key].style.left = sliderWidth + "px";
+                WM.animate(imgs[key], {
+                    left: 0
+                },10);
+                pointLight()
+            } else {
+                var that = this.innerHTML;
+                if (that > key) {
+                    WM.animate(imgs[key], {
+                        left: -sliderWidth
+                    },10);
+                    imgs[that].style.left = sliderWidth + "px";
+                } else if (that < key) {
+                    WM.animate(imgs[key], {
+                        left: sliderWidth
+                    },10);
+                    imgs[that].style.left = -sliderWidth + "px";
+                }
+                key = that;
+                WM.animate(imgs[key], {
+                    left: 0
+                },10);
+                pointLight()
+            }
+        },500,1000))
+    }
+    // 原点高亮函数
+    function pointLight() {
+        for (var i = 0, length1 = ctrls.length; i < length1; i++) {
+            ctrls[i].className = '';
+        }
+        ctrls[key].className = 'wm-slider-active';
+    }
+    // 定时器
+    var timer = null;
+    timer = setInterval(autoPlay, 5000);
+
+    function autoPlay() {
+        WM.animate(imgs[key], {
+            left: -sliderWidth
+        },10);
+        key++;
+        key > imgs.length - 1 ? key = 0 : key;
+        imgs[key].style.left = sliderWidth + "px";
+        WM.animate(imgs[key], {
+            left: 0
+        },10);
+
+        pointLight();
+    }
+
+    // 清除定时器
+    WM.all('.wm-slider')[0].onmouseover = function() {
+        WM.all('.wm-slider-arrow')[0].style.textIndent = 0;
+        clearInterval(timer);
+    }
+    WM.all('.wm-slider')[0].onmouseout = function() {
+        clearInterval(timer); 
+        timer = setInterval(autoPlay, 5000);
+        WM.all('.wm-slider-arrow')[0].style.textIndent = '-9999px';
+    }
+    </script>
+</body>
+
+</html>

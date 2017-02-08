@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="../../dist/webmodule.css">
+    <script type="text/javascript" src="../../dist/webmodule.js"></script>
+    <style type="text/css">
+    body {
+        margin: .5rem;
+    }
+    </style>
+</head>
+
+<body>
+    <div class="wm-checkbox" id="check_one">
+        <input type="checkbox" id="book">
+        <label for="book">读书</label>
+        <input type="checkbox" id="ball">
+        <label for="ball">篮球</label>
+        <input type="checkbox" id="music">
+        <label for="music">音乐</label>
+        <input type="checkbox" id="sport">
+        <label for="sport">跑步</label>
+        <input type="checkbox" id="sleep">
+        <label for="sleep">睡觉</label>
+    </div>
+    <button class="wm-btn wm-btn-success" id="btn_all">选择全部</button>
+    <button class="wm-btn wm-btn-success" id="btn_cancel">取消全选</button>
+    <button class="wm-btn wm-btn-success" id="btn_reverse">反选</button>
+    <table class="wm-table wm-table-hover" id="check_two">
+        <thead>
+            <tr>
+                <th>网站名称</th>
+                <th>网站地址</th>
+                <th>创建时间</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>
+                    <input type="checkbox" id="demo_one">     
+                </td>
+                <td>http://webmodule.cn</td>
+                <td>2016-12-18</td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="checkbox" id="demo_two">
+                </td>
+                <td>http://webmodule.cn</td>
+                <td>2016-12-18</td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="checkbox" id="demo_three">
+                </td>
+                <td>http://webmodule.cn</td>
+                <td>2016-12-18</td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="checkbox" id="demo_four">
+                </td>
+                <td>http://webmodule.cn</td>
+                <td>2016-12-18</td>
+            </tr>
+        </tbody>
+    </table>
+    <script type="text/javascript">
+    WM.checkbox('#check_one', '#btn_all', '#btn_cancel', '#btn_reverse');
+    WM.checkTable('#check_two')
+    </script>
+</body>
+
+</html>

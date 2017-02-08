@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" type="text/css" href="../../dist/webmodule.css">
+	<script type="text/javascript" src="../../dist/webmodule.js"></script>
+	<style type="text/css">
+		body {
+			margin: .5rem;
+		}
+		.wm-alert {
+			margin-bottom: 1rem;
+		}
+	</style>
+</head>
+<body>
+	<div class="wm-alert-default">
+	<button class="wm-close">&times;</button>
+		<p>这是单行文本警告框</p>
+	</div>
+	<div class="wm-alert-primary">
+		<button class="wm-close">&times;</button>
+		<p>这是单行文本警告框</p>
+	</div>
+	<div class="wm-alert-secondary">
+		<button class="wm-close">&times;</button>
+		<p>这是单行文本警告框</p>
+	</div>
+	<div class="wm-alert-success">
+		<button class="wm-close">&times;</button>
+		<p>这是单行文本警告框</p>
+	</div>
+	<div class="wm-alert-warning">
+		<button class="wm-close">&times;</button>
+		<p>这是单行文本警告框</p>
+	</div>
+
+	<div class="wm-alert-danger">
+		<button class="wm-close">&times;</button>
+		<p>这是单行文本警告框</p>
+	</div>
+
+	<div class="wm-alert-primary" id="closeBtn">
+		<button class="wm-close">&times;</button>
+		<h3>这是一个标题</h3>
+		<p>这是多行文本警告框</p>
+		<p>这是多行文本警告框</p>
+		<p>这是多行文本警告框</p>
+		<p>这是多行文本警告框</p>
+	</div>
+	<script type="text/javascript">
+		WM.alertBox('.wm-alert-default .wm-close');
+		WM.alertBox('.wm-alert-primary .wm-close');
+		WM.alertBox('.wm-alert-secondary .wm-close');
+		WM.alertBox('.wm-alert-success .wm-close');
+		WM.alertBox('.wm-alert-warning .wm-close');
+		WM.alertBox('.wm-alert-danger .wm-close');
+		WM.alertBox('#closeBtn .wm-close');
+	</script>
+</body>
+</html>

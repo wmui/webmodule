@@ -1,0 +1,42 @@
+@import url(../webmodule.css);
+i.wm-icon-sm {
+    font-size: .8rem;
+}
+
+i.wm-icon-md {
+    font-size: 1.4rem;
+}
+
+i.wm-icon-lg {
+    font-size: 1.8rem;
+}
+
+.wm-icon-btn {
+    width: 2.5rem;
+    height: 2.5rem;
+    line-height: 2.5rem;
+    text-align: center;
+    color: #FFF;
+    font-size: 1.5rem;
+    border: 1px solid transparent;
+}
+
+a.wm-icon-btn:hover {
+    text-decoration: none;
+}
+
+.wm-icon-default {
+    color: #333;
+}
+
+
+/* 镂空 */
+
+.wm-icon-btn.wm-icon-default.wm-pierced,
+.wm-icon-btn.wm-icon-primary.wm-pierced,
+.wm-icon-btn.wm-icon-secondary.wm-pierced,
+.wm-icon-btn.wm-icon-success.wm-pierced,
+.wm-icon-btn.wm-icon-warning.wm-pierced,
+.wm-icon-btn.wm-icon-danger.wm-pierced {
+    background-color: transparent;
+}

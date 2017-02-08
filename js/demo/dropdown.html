@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="../../dist/webmodule.css">
+    <script type="text/javascript" src="../../dist/webmodule.js"></script>
+    <style type="text/css">
+    body {
+        margin: .5rem;
+    }
+    
+    #dropup {
+        margin-top: 15rem;
+    }
+    .wm-dropup,
+    .wm-dropdown {
+        display: inline-block
+    }
+    </style>
+</head>
+
+<body>
+<div id="dropdown">
+    <div class="wm-dropdown">
+        <button class="wm-btn wm-btn-primary">下拉列表<i class="fa fa-caret-down pr"></i></button>
+        <ul class="wm-dropdown-content">
+            <li><a href="javascript:;">列表项演示1</a></li>
+            <li class="wm-divider"><a href="javascript:;">列表项演示2</a></li>
+            <li><a href="javascript:;">列表项演示3</a></li>
+            <li class="wm-disabled"><a href="javascript:;">列表项演示4</a></li>
+        </ul>
+    </div>
+    <div class="wm-dropdown">
+    <button class="wm-btn wm-btn-primary">下拉列表<i class="fa fa-caret-down pr"></i></button>
+    <ul class="wm-dropdown-content">
+        <li><a href="javascript:;">列表项演示1</a></li>
+        <li class="wm-divider"><a href="javascript:;">列表项演示2</a></li>
+        <li><a href="javascript:;">列表项演示3</a></li>
+        <li class="wm-disabled"><a href="javascript:;">列表项演示4</a></li>
+    </ul>
+</div>
+</div>
+
+<div id="dropup">
+    <div class="wm-dropup">
+        <button class="wm-btn wm-btn-success">上拉列表<i class="fa fa-caret-up pr"></i></button>
+        <ul class="wm-dropup-content">
+            <li><a href="javascript:;">列表项演示1</a></li>
+            <li class="wm-divider"><a href="javascript:;">列表项演示2</a></li>
+            <li><a href="javascript:;">列表项演示3</a></li>
+            <li class="wm-disabled"><a href="javascript:;">列表项演示4</a></li>
+        </ul>
+    </div>
+    <div class="wm-dropup">
+        <button class="wm-btn wm-btn-success">上拉列表<i class="fa fa-caret-up pr"></i></button>
+        <ul class="wm-dropup-content">
+            <li><a href="javascript:;">列表项演示1</a></li>
+            <li class="wm-divider"><a href="javascript:;">列表项演示2</a></li>
+            <li><a href="javascript:;">列表项演示3</a></li>
+            <li class="wm-disabled"><a href="javascript:;">列表项演示4</a></li>
+        </ul>
+    </div>
+</div>
+    <script type="text/javascript">
+        WM.dropdown('#dropdown');
+        WM.dropup('#dropup');
+    </script>
+</body>
+
+</html>

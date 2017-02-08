@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+    <link rel="stylesheet" type="text/css" href="../../dist/webmodule.css">
+    <script type="text/javascript" src="../../dist/webmodule.js"></script>
+    <style type="text/css">
+    body {
+        margin: .5rem;
+        background-color: #eee;
+    }
+    .wm-dragbox {
+    	position: relative;
+    	width: 30rem;
+    	background-color: #fff;
+    }
+    .wm-dragbox .wm-dragbox-topbar {
+    	height: 3rem;
+    	width: 30rem;
+    	position: absolute;
+    	top: 0;
+    	left: 0;
+    	background: #F3F3F3;
+    	border-bottom: 1px solid #E7E7E7;
+		cursor: move;
+    }
+    .wm-dragbox .wm-dragbox-content {
+    	padding: 3.5rem .8rem .5rem;
+    	
+    }
+    </style>
+</head>
+<body>
+	<div class="wm-dragbox" id="dragbox">
+		<div class="wm-dragbox-topbar">
+			<span class="wm-close">&times;</span>
+		</div>
+		<div class="wm-dragbox-content">
+			<p>这是一个可自由拖动的盒子。这是一个可自由拖动的盒子。</p>
+			<p>这是一个可自由拖动的盒子。这是一个可自由拖动的盒子。</p>
+			<p>这是一个可自由拖动的盒子。这是一个可自由拖动的盒子。</p>
+			<p>这是一个可自由拖动的盒子。这是一个可自由拖动的盒子。</p>
+		</div>
+	</div>
+	<script type="text/javascript">
+		WM.dragbox('#dragbox','.wm-dragbox-topbar','.wm-close')
+	</script>
+</body>
+</html>

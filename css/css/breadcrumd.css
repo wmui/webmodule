@@ -1,0 +1,21 @@
+@import url(../webmodule.css);
+.wm-breadcrumd > li {
+    float: left;
+}
+
+.wm-breadcrumd > li + li::before {
+    content: "/\00a0";
+    padding: 0 5px;
+    color: #CCC;
+}
+
+.wm-breadcrumd .wm-active {
+    color: #333;
+    box-shadow: none;
+}
+
+.wm-breadcrumd-arrow > li + li::before {
+    padding: 0 5px;
+    color: #CCC;
+    content: "\00BB";
+}
